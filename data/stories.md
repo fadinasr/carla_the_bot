@@ -33,3 +33,17 @@
 ## learn language
 * language_learn
   - utter_language_learn
+
+## thank
+* thank
+  - utter_noworries
+    
+## Some question from FAQ
+* faq
+    - respond_faq
+
+## contact us form
+* contact_us
+    - contact_us_form
+    - form{"name": "contact_us_form"}
+    - form{"name": null}

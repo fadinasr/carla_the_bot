@@ -7,30 +7,71 @@ intents:
   - mood_unhappy
   - bot_challenge
   - language_learn
+  - thank
+  - faq
+  - contact_us
+  - inform
+
+entities:
+  - first_name
+  - last_name
+  - email
+  - company
+
+forms:
+  - contact_us_form
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Hey! How are you?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
 
   utter_language_learn:
     - text: "Fadi! is that you?"
 
+  utter_noworries:
+    - text: "No worries!"
+
+  utter_ask_first_name:
+    - text: "What is your First Name?"
+
+  utter_ask_last_name:
+    - text: "What is your Last Name?"
+
+  utter_ask_email:
+    - text: "What is your Email?"
+
+  utter_ask_company:
+    - text: "What is the company you work for or own?"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions:
+  - respond_faq
+
+slots:
+  first_name:
+    type: unfeaturized
+  last_name:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  company:
+    type: unfeaturized
